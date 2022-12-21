@@ -1,4 +1,4 @@
-package number
+package tipe_data_number
 
 fun main() {
     val age: Byte = 1

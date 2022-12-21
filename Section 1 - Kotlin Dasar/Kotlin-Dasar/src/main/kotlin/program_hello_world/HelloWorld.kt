@@ -1,4 +1,4 @@
-package helloworld
+package program_hello_world
 
 fun main() {
     println("Hello World!")
