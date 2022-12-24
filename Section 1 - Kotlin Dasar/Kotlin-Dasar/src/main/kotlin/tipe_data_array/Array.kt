@@ -1,12 +1,12 @@
 package tipe_data_array
 
 fun main() {
-    val names: Array<String> = arrayOf("Rafi", "Madun", "Rijal")
-    val gender: Array<String?> = arrayOfNulls(3)
+    val data = arrayOf("Rafi", 22, true)
+    val gender = arrayOfNulls<String>(3)
 
-    println(names[0])
-    names[0] = "Brusli"
-    println(names[0])
+    println(data[2])
+    data[0] = "Brusli"
+    println(data[0])
 
     println(gender[0])
     gender[0] = "Male"
