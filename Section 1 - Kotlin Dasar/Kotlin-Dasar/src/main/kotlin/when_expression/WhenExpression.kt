@@ -3,42 +3,51 @@ package when_expression
 fun main() {
     var finalExam = "A"
     // When Expression
-    when (finalExam) {
-        "A" -> println("Amazing")
-        "B" -> println("Good")
-        "C" -> println("Not Bad")
-        "D" -> println("Bad")
-        else -> println("Try Again")
+    val result1 = when (finalExam) {
+        "A" -> "Amazing"
+        "B" -> "Good"
+        "C" -> "Not Bad"
+        "D" -> "Bad"
+        else -> "Try Again"
     }
+    println(result1)
+
 
     finalExam = "C"
     // When Expression Multiple Option
-    when (finalExam) {
-        "A", "B", "C" -> println("Pass")
-        else -> println("Not Pass")
+    val result2 = when (finalExam) {
+        "A", "B", "C" -> "Pass"
+        else -> "Not Pass"
     }
+    println(result2)
+
 
     // When Expression In
     finalExam = "D"
     val passValues = arrayOf("A", "B", "C")
-    when (finalExam) {
-        in passValues -> println("Pass")
-        !in passValues -> println("Not Pass")
+    val result3 = when (finalExam) {
+        in passValues -> "Pass"
+        else -> "Not Pass"
     }
+    println(result3)
+
 
     // When Expression Is
-    when (finalExam) {
-        is String -> println("This is a String")
-        !is String -> println("This is not a String")
+    val result4 = when (finalExam) {
+        is String -> "This is a String"
+        else -> "This is not a String"
     }
+    println(result4)
+
 
     // When Mark Variable (Without Variable)
     val examScore = 80
-    when {
-        examScore > 90 -> println("Amazing")
-        examScore > 80 -> println("Good")
-        examScore > 70 -> println("Not Bad")
-        examScore > 60 -> println("Bad")
-        else -> println("Try Again")
+    val result5 = when {
+        examScore > 90 -> "Amazing"
+        examScore > 80 -> "Good"
+        examScore > 70 -> "Not Bad"
+        examScore > 60 -> "Bad"
+        else -> "Try Again"
     }
+    println(result5)
 }
