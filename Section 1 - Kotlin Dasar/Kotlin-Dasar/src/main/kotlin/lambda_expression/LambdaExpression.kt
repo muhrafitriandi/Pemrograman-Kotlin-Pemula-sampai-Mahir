@@ -13,7 +13,7 @@ fun main() {
     val multiplication = ::multiplication
     println(multiplication(2, 3))
 
-    // Lambda Expression, Parameter Function
+    // Lambda Expression, Parameter Function (Higher-Order Function)
     val result = processNumbers(2, 5) { x, y -> x.times(y) }
     println(result)
 }
