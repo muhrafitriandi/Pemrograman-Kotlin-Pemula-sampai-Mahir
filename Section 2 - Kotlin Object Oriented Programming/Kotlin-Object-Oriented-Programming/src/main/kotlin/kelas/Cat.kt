@@ -1,0 +1,3 @@
+package kelas
+
+class Cat
