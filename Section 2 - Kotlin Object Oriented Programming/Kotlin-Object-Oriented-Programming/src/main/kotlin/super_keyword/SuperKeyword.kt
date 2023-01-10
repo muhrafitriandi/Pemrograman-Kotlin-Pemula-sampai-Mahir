@@ -4,4 +4,5 @@ fun main() {
     val triangle = Triangle()
     println(triangle.corner)
     println(triangle.parentCorner)
+    triangle.print()
 }
