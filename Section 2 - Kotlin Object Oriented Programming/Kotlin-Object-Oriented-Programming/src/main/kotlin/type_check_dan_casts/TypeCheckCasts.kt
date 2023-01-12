@@ -27,6 +27,11 @@ fun printObjectWithWhen(any: Any) {
     println(data)
 }
 
+fun printStringUnsafe(any: Any) {
+    val value = any as String
+    println(value)
+}
+
 fun main() {
     printObjectWithWhen("Rafi")
     printObjectWithWhen(1)
@@ -35,4 +40,7 @@ fun main() {
     printObjectWithWhen(2.0)
     printObjectWithWhen(Laptop("Asus"))
     printObjectWithWhen(Smartphone("POCO M4 Pro", 2_800_000, "Android", 2022))
+
+    printStringUnsafe("Triandy") // Success
+    // printStringUnsafe(22) // ClassCastException
 }
