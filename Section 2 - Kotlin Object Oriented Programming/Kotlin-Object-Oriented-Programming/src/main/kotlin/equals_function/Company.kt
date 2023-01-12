@@ -7,4 +7,8 @@ class Company(val name: String) {
             else -> false
         }
     }
+
+    override fun hashCode(): Int {
+        return this.name.hashCode()
+    }
 }
