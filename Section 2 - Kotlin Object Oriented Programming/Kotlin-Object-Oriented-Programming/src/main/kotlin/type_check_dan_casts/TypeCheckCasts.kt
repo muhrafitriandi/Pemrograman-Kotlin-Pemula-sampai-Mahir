@@ -32,6 +32,11 @@ fun printStringUnsafe(any: Any) {
     println(value)
 }
 
+fun printStringSafe(any: Any) {
+    val value = any as? String
+    println(value)
+}
+
 fun main() {
     printObjectWithWhen("Rafi")
     printObjectWithWhen(1)
@@ -43,4 +48,7 @@ fun main() {
 
     printStringUnsafe("Triandy") // Success
     // printStringUnsafe(22) // ClassCastException
+
+    printStringSafe("Muhammad") // Success
+    printStringSafe(19) // null
 }
