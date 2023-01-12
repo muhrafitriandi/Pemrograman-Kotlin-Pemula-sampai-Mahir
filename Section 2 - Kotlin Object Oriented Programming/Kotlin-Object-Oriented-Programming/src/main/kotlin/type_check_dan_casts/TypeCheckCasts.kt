@@ -18,12 +18,21 @@ fun printObjectWithIf(any: Any) {
     println(data)
 }
 
+fun printObjectWithWhen(any: Any) {
+    val data = when (any) {
+        is Laptop -> "Laptop with name ${any.name}"
+        is Smartphone -> "Handphone with name ${any.name}"
+        else -> any
+    }
+    println(data)
+}
+
 fun main() {
-    printObjectWithIf("Rafi")
-    printObjectWithIf(1)
-    printObjectWithIf(true)
-    arrayOf(1, 2).forEach(::printObjectWithIf)
-    printObjectWithIf(2.0)
-    printObjectWithIf(Laptop("Asus"))
-    printObjectWithIf(Smartphone("POCO M4 Pro", 2_800_000, "Android", 2022))
+    printObjectWithWhen("Rafi")
+    printObjectWithWhen(1)
+    printObjectWithWhen(true)
+    arrayOf(1, 2).forEach(::printObjectWithWhen)
+    printObjectWithWhen(2.0)
+    printObjectWithWhen(Laptop("Asus"))
+    printObjectWithWhen(Smartphone("POCO M4 Pro", 2_800_000, "Android", 2022))
 }
