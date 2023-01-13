@@ -5,7 +5,9 @@ interface Driveable {
     fun startEngine()
     fun stopEngine()
     fun drive()
-
+    fun honk() {
+        println("Honk Honk")
+    }
 }
 
 class Car(override val name: String) : Driveable {

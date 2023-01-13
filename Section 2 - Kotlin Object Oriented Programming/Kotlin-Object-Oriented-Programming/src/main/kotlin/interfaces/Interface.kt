@@ -5,5 +5,7 @@ fun main() {
     val motorcycle = Motorcycle("Vario")
 
     car.drive()
+    car.honk()
     motorcycle.drive()
+    motorcycle.honk()
 }
