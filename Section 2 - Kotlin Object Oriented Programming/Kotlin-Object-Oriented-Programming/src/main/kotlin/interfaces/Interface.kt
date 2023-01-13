@@ -6,6 +6,8 @@ fun main() {
 
     car.drive()
     car.honk()
+    car.move()
     motorcycle.drive()
     motorcycle.honk()
+    motorcycle.move()
 }
