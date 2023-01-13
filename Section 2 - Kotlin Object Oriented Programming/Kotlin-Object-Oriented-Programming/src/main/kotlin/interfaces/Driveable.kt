@@ -1,16 +1,20 @@
 package interfaces
 
-interface Driveable {
+interface Vehicle {
     val name: String
     fun startEngine()
     fun stopEngine()
-    fun drive()
     fun honk() {
         println("Honk Honk")
     }
 }
 
-class Car(override val name: String) : Driveable {
+interface Driveable {
+    fun drive()
+}
+
+
+class Car(override val name: String) : Vehicle, Driveable {
     override fun startEngine() {
         println("Start Engine ${this.name} Car")
     }
@@ -25,7 +29,7 @@ class Car(override val name: String) : Driveable {
 
 }
 
-class Motorcycle(override val name: String) : Driveable {
+class Motorcycle(override val name: String) : Vehicle, Driveable {
     override fun startEngine() {
         println("Start Engine ${this.name} Motorcycle")
     }
