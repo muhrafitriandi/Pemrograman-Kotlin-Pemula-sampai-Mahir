@@ -3,7 +3,7 @@ package sealed_class
 fun processPayment(paymentMethod: PaymentMethod) {
     return when (paymentMethod) {
         is PaymentMethod.BankTransfer -> println(paymentMethod.name)
-        is PaymentMethod.Paypal -> println("Paypal")
+        PaymentMethod.Paypal -> println("Paypal")
         is PaymentMethod.EWallet -> println(paymentMethod.name)
     }
 }
