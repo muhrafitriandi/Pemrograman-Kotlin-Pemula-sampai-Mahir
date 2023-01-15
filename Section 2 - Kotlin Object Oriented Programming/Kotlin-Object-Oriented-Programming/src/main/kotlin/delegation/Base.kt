@@ -28,3 +28,9 @@ class MyBaseDelegationManual(val base: Base) : Base {
 }
 
 class MyBaseDelegation(val base: Base) : Base by base
+
+class MyBaseDelegationCustom(val base: Base) : Base by base {
+    override fun sayHello(name: String) {
+        println("Hi $name")
+    }
+}

@@ -4,6 +4,7 @@ fun main() {
     val myBase = MyBase()
     val myBaseDelegationManual = MyBaseDelegationManual(myBase)
     val myBaseDelegation = MyBaseDelegation(myBase)
+    val myBaseDelegationCustom = MyBaseDelegationCustom(myBase)
 
     // myBase.sayHello("Muhammad")
 
@@ -12,4 +13,7 @@ fun main() {
 
     myBaseDelegation.sayHello("Triandi")
     myBaseDelegation.sayGoodbye("Triandi")
+
+    myBaseDelegationCustom.sayHello("Muhammad")
+    myBaseDelegationCustom.sayGoodbye("Muhammad")
 }
