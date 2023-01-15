@@ -26,3 +26,5 @@ class MyBaseDelegationManual(val base: Base) : Base {
     }
 
 }
+
+class MyBaseDelegation(val base: Base) : Base by base

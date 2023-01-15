@@ -2,9 +2,14 @@ package delegation
 
 fun main() {
     val myBase = MyBase()
-    val myBaseDelegation = MyBaseDelegationManual(myBase)
+    val myBaseDelegationManual = MyBaseDelegationManual(myBase)
+    val myBaseDelegation = MyBaseDelegation(myBase)
 
     // myBase.sayHello("Muhammad")
-    myBaseDelegation.sayHello("Rafi")
-    myBaseDelegation.sayGoodbye("Rafi")
+
+    myBaseDelegationManual.sayHello("Rafi")
+    myBaseDelegationManual.sayGoodbye("Rafi")
+
+    myBaseDelegation.sayHello("Triandi")
+    myBaseDelegation.sayGoodbye("Triandi")
 }
