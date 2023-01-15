@@ -1,17 +1,19 @@
 package sealed_class
 
-fun processPayment(paymentMethod: PaymentMethod) {
-    return when (paymentMethod) {
-        is PaymentMethod.BankTransfer -> println(paymentMethod.name)
-        PaymentMethod.Paypal -> println("Paypal")
-        is PaymentMethod.EWallet -> println(paymentMethod.name)
+fun evaluate(shape: Shape) {
+    return when (shape) {
+        is Shape.Circle -> println("Circle area is ${3.14.times(shape.radius).times(shape.radius)}")
+        is Shape.Rectangle -> println("Rectangle area is ${shape.length.times(shape.breadth)}")
+        is Shape.Square -> println("Square area is ${shape.length.times(shape.length)}")
     }
 }
 
 fun main() {
-    val bankTransfer = PaymentMethod.BankTransfer("BCA")
-    val person1 = Person("Rafi", bankTransfer)
+    val circle = Shape.Circle(4.5f)
+    val rectangle = Shape.Rectangle(4, 5)
+    val square = Shape.Square(4)
 
-    println(person1.name)
-    processPayment(person1.paymentMethod)
+    evaluate(circle)
+    evaluate(rectangle)
+    evaluate(square)
 }
