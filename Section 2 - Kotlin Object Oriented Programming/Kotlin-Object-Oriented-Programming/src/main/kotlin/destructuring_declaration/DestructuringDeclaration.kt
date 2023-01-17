@@ -28,4 +28,10 @@ fun main() {
     // Simplify
     val (status, message) = result
     println("Status: $status, Message: $message")
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    // Ignoring other unnecessary variables
+    val (status2, _) = result
+    println("Status: $status2")
 }
