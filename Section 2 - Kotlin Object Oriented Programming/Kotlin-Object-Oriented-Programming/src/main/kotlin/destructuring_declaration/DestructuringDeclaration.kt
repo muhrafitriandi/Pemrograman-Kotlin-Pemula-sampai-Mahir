@@ -4,6 +4,10 @@ fun getResult(value1: Int, value2: String): Result {
     return Result(value1, value2)
 }
 
+fun getTotalPrice(item: List<Purchase>, callback: PurchaseCallback): Double {
+    return callback(item)
+}
+
 fun main() {
     val person = Person("Rafi", 22)
 
@@ -36,4 +40,21 @@ fun main() {
     println("Status: $status2")
 
     // -----------------------------------------------------------------------------------------------------------------
+
+    // Destructurin Lambda Parameter
+    // Manual
+    val purchases = listOf(Purchase("Apple", 0.5), Purchase("Banana", 0.25))
+    // val total = getTotalPrice(purchases) { count ->
+    //     count.sumOf { purchase ->
+    //         purchase.price
+    //     }
+    // }
+
+    // Simplify
+    val total = getTotalPrice(purchases) { count ->
+        count.sumOf { (_, price) ->
+            price
+        }
+    }
+    println("Total price of all purchases: $total")
 }
