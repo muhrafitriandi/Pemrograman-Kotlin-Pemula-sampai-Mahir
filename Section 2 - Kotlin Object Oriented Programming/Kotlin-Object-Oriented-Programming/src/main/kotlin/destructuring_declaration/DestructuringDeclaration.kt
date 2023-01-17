@@ -1,6 +1,6 @@
 package destructuring_declaration
 
-fun getResult(value1: String, value2: String): Result {
+fun getResult(value1: Int, value2: String): Result {
     return Result(value1, value2)
 }
 
@@ -20,7 +20,7 @@ fun main() {
 
     // Destructuring Function
     // Manual
-    val result = getResult("Success", "The operation completed successfully")
+    val result = getResult(401, "Unauthorized")
     // val status = result.status
     // val message = result.message
     // println("Status: $status, Message: $message")
@@ -34,4 +34,6 @@ fun main() {
     // Ignoring other unnecessary variables
     val (status2, _) = result
     println("Status: $status2")
+
+    // -----------------------------------------------------------------------------------------------------------------
 }
