@@ -1,5 +1,9 @@
 package destructuring_declaration
 
+fun getResult(value1: String, value2: String): Result {
+    return Result(value1, value2)
+}
+
 fun main() {
     val person = Person("Rafi", 22)
 
@@ -11,4 +15,17 @@ fun main() {
     // With Data Class
     val (name, age) = person
     println("My name is $name and I am $age years old")
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    // Destructuring Function
+    // Manual
+    val result = getResult("Success", "The operation completed successfully")
+    // val status = result.status
+    // val message = result.message
+    // println("Status: $status, Message: $message")
+
+    // Simplify
+    val (status, message) = result
+    println("Status: $status, Message: $message")
 }

@@ -8,3 +8,5 @@ package destructuring_declaration
 
 // Solve using data class, no need to create functionX()
 data class Person(val name: String, val age: Int)
+
+data class Result(val status: String, val message: String)
