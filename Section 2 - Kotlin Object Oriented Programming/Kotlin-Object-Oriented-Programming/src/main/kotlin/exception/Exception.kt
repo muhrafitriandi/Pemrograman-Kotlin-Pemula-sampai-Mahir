@@ -20,5 +20,7 @@ fun main() {
         println("Sesuatu telah terjadi: ${error.message}")
     } catch (error: NullPointerException) {
         println("Password tidak boleh kosong")
+    } finally {
+        println("Program Selesai") // Statement ini akan selalu dijalankan, baik sukses maupun gagal
     }
 }
