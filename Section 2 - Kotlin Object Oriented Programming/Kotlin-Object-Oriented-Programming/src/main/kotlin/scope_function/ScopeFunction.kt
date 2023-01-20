@@ -7,4 +7,9 @@ fun main() {
         "Name: ${it.name}, Age: ${it.age}"
     }
     println(studentLet)
+
+    val studentRun = student.run {
+         "Name: ${this.name}, Age: ${this.age}"
+    }
+    println(studentRun)
 }
