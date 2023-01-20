@@ -1,12 +1,12 @@
 package reflection
 
 data class CreateProductRequest(
-    val id: String,
-    val name: String,
-    val price: Long
+    @NotBlank val id: String,
+    @NotBlank val name: String,
+    @NotBlank val price: Long
 )
 
 data class CreateCategoryRequest(
-    val id: String,
-    val name: String
+    @NotBlank val id: String,
+    @NotBlank val name: String
 )
