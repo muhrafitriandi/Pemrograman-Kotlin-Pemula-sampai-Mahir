@@ -12,4 +12,9 @@ fun main() {
          "Name: ${this.name}, Age: ${this.age}"
     }
     println(studentRun)
+
+    val studentApply = student.apply {
+        "Name: ${this.name}, Age: ${this.age}"
+    }
+    println(studentApply)
 }
