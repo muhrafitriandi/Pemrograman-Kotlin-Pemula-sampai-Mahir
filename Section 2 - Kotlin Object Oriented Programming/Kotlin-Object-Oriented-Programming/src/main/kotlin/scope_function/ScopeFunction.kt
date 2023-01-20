@@ -8,6 +8,11 @@ fun main() {
     }
     println(studentLet)
 
+    val studentAlso = student.also {
+        "Name: ${it.name}, Age: ${it.age}"
+    }
+    println(studentAlso)
+
     val studentRun = student.run {
          "Name: ${this.name}, Age: ${this.age}"
     }
