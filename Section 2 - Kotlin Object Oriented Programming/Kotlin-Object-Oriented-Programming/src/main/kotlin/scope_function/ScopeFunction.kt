@@ -8,18 +8,24 @@ fun main() {
     }
     println(studentLet)
 
-    val studentAlso = student.also {
-        "Name: ${it.name}, Age: ${it.age}"
-    }
-    println(studentAlso)
-
     val studentRun = student.run {
          "Name: ${this.name}, Age: ${this.age}"
     }
     println(studentRun)
 
-    val studentApply = student.apply {
-        "Name: ${this.name}, Age: ${this.age}"
+    val studentApply = student.apply { // apply will return object Student
+        "Name: ${this.name}, Age: ${this.age}" // Ignore, because the return value is Unit
     }
     println(studentApply)
+
+    val studentAlso = student.also { // also will return object Student
+        "Name: ${it.name}, Age: ${it.age}" // Ignore, because the return value is Unit
+    }
+    println(studentAlso)
+
+    // Like run function
+    val studentWith = with(student) {
+        "Name: ${this.name}, Age: ${this.age}"
+    }
+    println(studentWith)
 }
