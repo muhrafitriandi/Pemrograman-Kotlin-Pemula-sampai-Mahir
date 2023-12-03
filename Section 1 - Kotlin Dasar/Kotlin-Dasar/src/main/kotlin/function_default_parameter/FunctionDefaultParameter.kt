@@ -1,7 +1,8 @@
 package function_default_parameter
 
 fun sayHello(firstName: String, lastName: String? = null) {
-    println("Hello $firstName ${lastName ?: ""}")
+    val fullName = if (lastName != null) "$firstName $lastName" else firstName
+    println("Hello, $fullName")
 }
 fun main() {
     sayHello("Muhammad Rafi", "Triandi")
