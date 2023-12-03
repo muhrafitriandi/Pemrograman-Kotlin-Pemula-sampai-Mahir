@@ -8,6 +8,11 @@ fun main() {
         RT.10/RW.5, Cemp. Putih Tim., Kec. Cemp. Putih, Kota Jakarta
         Pusat, Daerah Khusus Ibukota Jakarta 10510
     """.trimIndent()
+    val multilineString = """
+         *   Line 1
+         *   Line 2
+         *   Line 3
+     """.trimMargin("*").trimIndent()
 
     val fullName = "$firstName $lastName"
 
@@ -16,4 +21,5 @@ fun main() {
     println("Address: $address")
     println("Fullname: $fullName")
     println("Length Fullname: ${fullName.length}")
+    println(multilineString)
 }
