@@ -16,4 +16,10 @@ fun main() {
     // gender[3] = "Dont Know"
     println(gender[0])
     println(gender.size)
+
+    data.forEach {
+        when (it) {
+            is String, is Int, is Boolean -> println("$it is ${it::class.simpleName}")
+        }
+    }
 }
