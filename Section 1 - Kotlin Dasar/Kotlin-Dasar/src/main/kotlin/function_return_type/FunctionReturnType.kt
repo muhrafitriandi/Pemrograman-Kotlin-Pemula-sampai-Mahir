@@ -13,7 +13,11 @@ fun multiplication(x: Double, y: Double): Double {
 }
 
 fun division(x: Double, y: Double): Double {
-    return x.div(y)
+    return if (x == 0.0 || y == 0.0 ) {
+        0.0
+    } else {
+        x.div(y)
+    }
 }
 
 fun modulo(x: Double, y: Double): Double {
@@ -22,18 +26,20 @@ fun modulo(x: Double, y: Double): Double {
 
 fun main() {
     println("===SUM===")
-    println(sum(10.0, 20.0))
-    println(sum(10.5, 20.0))
+    println(sum(x = 10.0, y = 20.0))
+    println(sum(x = 10.5, y = 20.0))
 
     println()
 
     println("===SUBTRACTION===")
     println(subtraction(x = 20.0, y = 10.0))
+    println(subtraction(x = 10.0, y = 0.0))
 
     println()
 
     println("===MULTIPLICATION===")
-    println(multiplication(20.0, 10.0))
+    println(multiplication(x = 20.0, y = 10.0))
+    println(multiplication(x = 10.5, y = 20.0))
 
     println()
 
