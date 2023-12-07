@@ -11,10 +11,7 @@ fun factorialLoop(n: Int): Int {
 fun factorialRecursive(n: Int): Int {
     return when (n) {
         1 -> 1
-        else -> {
-            val result: Int = n * factorialRecursive(n - 1)
-            result
-        }
+        else -> n * factorialRecursive(n - 1)
     }
 }
 
@@ -22,12 +19,12 @@ fun factorialRecursive(n: Int): Int {
 
 fun fibonacciLoop(n: Int): Int {
     var fn = 0
-    var fn1 = 1
-    var fn2 = 0
+    var fn1 = 0
+    var fn2 = 1
     for (i in 1 until n) {
         fn = fn1 + fn2
-        fn2 = fn1
-        fn1 = fn
+        fn1 = fn2
+        fn2 = fn
     }
     return fn
 }
@@ -44,6 +41,6 @@ fun main() {
     println(factorialLoop(5))
     println(factorialRecursive(5))
 
-    println(fibonacciLoop(10))
-    println(fibonacciRecursive(10))
+    println(fibonacciLoop(8))
+    println(fibonacciRecursive(8))
 }
