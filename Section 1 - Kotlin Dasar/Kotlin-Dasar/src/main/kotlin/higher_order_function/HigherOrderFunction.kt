@@ -6,6 +6,9 @@ fun createAdder(x: Int): (Int) -> Int {
     return { y -> x + y }
 }
 
+// flexible to calculate number
+fun calculateNumber(x: Int, y: Int, calculate: (Int, Int) -> Int) = calculate(x, y)
+
 fun sayHello(firstName: String, lastName: String, transform: (String, String) -> String): String {
     return transform(firstName, lastName)
 }
@@ -23,6 +26,8 @@ fun main() {
     println(sayHello("joko", "kurnia") { firstName: String, lastName: String ->
         "${firstName.uppercase()} ${lastName.uppercase()}"
     })
+
+    println(calculateNumber(10, 20) { x, y -> x.times(y) })
 
     // Lambda with Multiple Return Value
     val checkEvenOddNumber: (IntArray) -> Unit = {
