@@ -7,19 +7,18 @@ fun sayHello(): (String) -> String {
 fun main() {
     println(sayHello()("rafi"))
 
-    val printEventNumber = fun(values: IntArray) {
+    val checkEvenOddNumber = fun(values: IntArray) {
         values.forEach { num ->
-            val result = if (num % 2 == 0) {
-                "$num is Even Number"
-            } else {
-                "$num is Odd Number"
+            val checkResult = when {
+                num % 2 == 0 -> "$num is Even"
+                else -> "$num is Odd"
             }
-            println(result)
+            println(checkResult)
         }
     }
 
     val upper = fun(value: String): String = if (value.isBlank()) "Ups" else value.uppercase()
     println(upper("triandy"))
 
-    printEventNumber(intArrayOf(1, 2, 3))
+    checkEvenOddNumber(intArrayOf(1, 2, 3))
 }

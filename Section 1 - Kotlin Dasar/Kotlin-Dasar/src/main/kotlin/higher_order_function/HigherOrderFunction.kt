@@ -23,4 +23,16 @@ fun main() {
     println(sayHello("joko", "kurnia") { firstName: String, lastName: String ->
         "${firstName.uppercase()} ${lastName.uppercase()}"
     })
+
+    // Lambda with Multiple Return Value
+    val checkEvenOddNumber: (IntArray) -> Unit = {
+        it.forEach { num ->
+            val checkResult = when {
+                num % 2 == 0 -> "$num is Even"
+                else -> "$num is Odd"
+            }
+            println(checkResult)
+        }
+    }
+    checkEvenOddNumber(intArrayOf(1, 2, 3))
 }
