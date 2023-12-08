@@ -38,6 +38,8 @@ fun sum(x: IntArray, y: IntArray, operation: (IntArray, IntArray) -> Unit) {
 
 fun main() {
     labelBreak()
+    println()
     labelContinue()
+    println()
     labelReturn()
 }
