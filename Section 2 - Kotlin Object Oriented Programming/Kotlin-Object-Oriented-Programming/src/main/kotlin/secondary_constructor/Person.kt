@@ -40,5 +40,5 @@ class Person(val name: String, val age: Int, val address: String) {
 //}
 
 // Note:
-// Without Primary Constructor, it is not necessary to use this (to execute other constructors).
+// With Primary Constructor, it is not necessary to use this (to execute other constructors).
 // Without Primary Constructor, the code will look messier, because we have to declare variables and give default values which are eventually replaced with the parameters in the secondary constructor.
