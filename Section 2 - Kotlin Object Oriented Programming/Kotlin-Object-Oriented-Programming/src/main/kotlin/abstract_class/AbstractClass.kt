@@ -1,10 +1,13 @@
 package abstract_class
 
 fun main() {
-    // val location = Location() // Error: Cannot create an instance of an abstract class
-    val city = City("Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi")
-    val country = Country("Indonesia")
+    // val shape = Shape("Shape") // Error: Cannot create an instance of an abstract class
+    val rectangle = Rectangle("Rectangle", 5.0, 3.0)
+    val circle = Circle("Circle", 2.0)
 
-    city.name.forEach(::println)
-    country.name.forEach(::println)
+    rectangle.printName()
+    println("Rectangle area is ${rectangle.getArea()}")
+
+    circle.printName()
+    println("Circle area is ${circle.getArea()}")
 }
