@@ -14,6 +14,7 @@ fun main() {
     val employeeInner = bossInner.Employee("Rafi")
 
     employeeInner.ask()
+    // mencari function yang bersifat private dengan nama `answer` lalu mengaksesnya
     Boss::class.declaredMemberFunctions.find {
         it.name == "answer"
     }?.let {
