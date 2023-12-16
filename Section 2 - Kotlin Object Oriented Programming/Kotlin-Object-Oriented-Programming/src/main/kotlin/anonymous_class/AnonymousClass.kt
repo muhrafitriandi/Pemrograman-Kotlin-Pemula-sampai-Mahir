@@ -10,7 +10,6 @@ fun main() {
     attack(balmond)
 
     // Gunakan anonymous class jika objek tidak memiliki properties, daripada harus membuat object dan class yang mengimplementasikannya secara berulang-ulang
-    // Jika memiliki properties, gunakanlah abstract class agar menjadi lebih dinamis
     attack(object : IAttack {
         override fun cubit() {
             println("Balmond Nyubit menggunakan jepitan jemuran")
