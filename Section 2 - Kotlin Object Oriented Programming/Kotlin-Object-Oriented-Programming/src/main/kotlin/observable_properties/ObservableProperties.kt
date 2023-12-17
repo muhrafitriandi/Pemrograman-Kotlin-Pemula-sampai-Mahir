@@ -13,5 +13,5 @@ fun main() {
     student.quiz = 75
     student.quiz = 65
     student.quiz = 50 // will not changed
-    student.quiz = 30
+    student.quiz = 30 // will not changed
 }
