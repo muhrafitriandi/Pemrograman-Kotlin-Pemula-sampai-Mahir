@@ -8,6 +8,13 @@ fun getTotalPrice(item: List<Purchase>, callback: PurchaseCallback): Double {
     return callback(item)
 }
 
+fun getMinMax(value1: Int, value2: Int): MinMax {
+    return when {
+        value1 > value2 -> MinMax(min = value2, max = value1)
+        else -> MinMax(min = value1, max = value2)
+    }
+}
+
 fun main() {
     val person = Person("Rafi", 22)
 
@@ -57,4 +64,10 @@ fun main() {
         }
     }
     println("Total price of all purchases: $total")
+
+    // -----------------------------------------------------------------------------------------------------------------
+
+    val (min, max) = getMinMax(1000, 100)
+    println("Min: $min")
+    println("Max: $max")
 }
