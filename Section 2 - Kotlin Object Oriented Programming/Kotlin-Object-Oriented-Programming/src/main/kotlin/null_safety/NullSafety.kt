@@ -15,7 +15,12 @@ fun sayHello(friend: Friend?) {
     // println("Hello $result")
 
     // Double Bang Operator (percaya bahwa data tidak mungkin null, tetapi jika ternyata datanya null maka akan terjadi npe)
-    println(friend!!.name)
+    // println(friend!!.name)
+
+    // Let scope functions
+    friend?.let {
+        println("Hello ${it.name}")
+    }
 }
 
 fun main() {
