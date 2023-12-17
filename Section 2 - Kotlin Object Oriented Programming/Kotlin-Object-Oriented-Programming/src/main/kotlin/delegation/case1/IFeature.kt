@@ -30,3 +30,6 @@ class DeveloperIOS : IFeature {
 }
 
 class Client(val developer: IFeature) : IFeature by developer
+
+// Static delegate
+//class Client : IFeature by DeveloperAndroid()
