@@ -1,4 +1,4 @@
-package reflection
+package reflection.annotation
 
 @Target(AnnotationTarget.PROPERTY)
 @Retention(AnnotationRetention.RUNTIME) // the default is runtime

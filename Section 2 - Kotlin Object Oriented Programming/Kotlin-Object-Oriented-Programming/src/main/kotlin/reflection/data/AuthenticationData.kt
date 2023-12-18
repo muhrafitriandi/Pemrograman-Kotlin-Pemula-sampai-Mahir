@@ -1,4 +1,7 @@
-package reflection
+package reflection.data
+
+import reflection.annotation.AllowedRegex
+import reflection.annotation.NotBlank
 
 data class Register(
     @NotBlank
@@ -27,15 +30,3 @@ data class Login(
     @NotBlank
     val password: String,
 )
-
-open class Animal {
-    fun sound() {
-        println("Sample Sound")
-    }
-}
-
-class Dog : Animal() {
-    fun walk() {
-        println("Sample Walk")
-    }
-}
