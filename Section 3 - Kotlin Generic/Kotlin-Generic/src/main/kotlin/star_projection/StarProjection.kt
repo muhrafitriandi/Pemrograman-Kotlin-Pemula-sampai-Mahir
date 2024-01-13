@@ -1,17 +1,17 @@
 package star_projection
 
-fun displayLength(array: Array<*>) { // This is same as: fun <T> displayLength(array: Array<T>)
-    for (i in array) {
-        print("$i ")
-    }
-    println("Total array is ${array.size}")
+class Box<T>(val value: T)
+
+fun printBoxValue(box: Box<*>) {
+    val value = box.value
+    println("Box value: $value")
 }
 
-fun main() {
-    val intArray: Array<Int> = arrayOf(1, 2, 3, 4, 5)
-    val stringArray: Array<String> = arrayOf("Muhammad", "Rafi", "Triandi")
-    // val anyArray: Array<Any> = stringArray // error
 
-    displayLength(intArray)
-    displayLength(stringArray)
+fun main() {
+    val stringBox = Box("Hello, World!")
+    val intBox = Box(42)
+
+    printBoxValue(stringBox)
+    printBoxValue(intBox)
 }
