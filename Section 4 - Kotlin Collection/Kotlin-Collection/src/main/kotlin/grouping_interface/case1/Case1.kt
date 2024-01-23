@@ -18,4 +18,13 @@ fun main() {
     }
     val sumValues2: Int = reduceAndSum.values.sum()
     println("$sumValues2")
+
+    val numberGroup = numbers.groupBy { it }
+    val sumValues = numberGroup.mapValues {
+        it.value.sum()
+    }
+    println(sumValues)
+    val sumAll = sumValues.values.sum()
+    println(sumAll)
+
 }
