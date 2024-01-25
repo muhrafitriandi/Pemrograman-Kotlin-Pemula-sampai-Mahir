@@ -47,3 +47,14 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.register("printEven") {
+    doFirst {
+        val numbers = (0..10)
+        val evenNumber = numbers.filter { it % 2 == 0 }
+        println(evenNumber)
+    }
+    doLast {
+        println("Finish")
+    }
+}
