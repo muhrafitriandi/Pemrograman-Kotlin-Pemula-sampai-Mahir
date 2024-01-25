@@ -8,6 +8,10 @@ class App {
         get() {
             return "Hello World!"
         }
+
+    fun operation(a: Int, b: Int, calculate: (Int, Int) -> Int): Int {
+        return calculate(a, b)
+    }
 }
 
 fun main() {

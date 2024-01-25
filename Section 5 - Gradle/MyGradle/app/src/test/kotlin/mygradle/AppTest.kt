@@ -4,11 +4,31 @@
 package mygradle
 
 import kotlin.test.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 
 class AppTest {
-    @Test fun appHasAGreeting() {
+    @Test
+    fun appHasAGreeting() {
         val classUnderTest = App()
         assertNotNull(classUnderTest.greeting, "app should have a greeting")
+    }
+
+    @Test // Success Test
+    fun addTest() {
+        val classUnderTest = App()
+        val result = classUnderTest.operation(5, 5) { a: Int, b: Int ->
+            a.plus(b)
+        }
+        assertEquals(10, result, "5 + 5 should be 10")
+    }
+
+    @Test // Fail Test
+    fun subtractTest() {
+        val classUnderTest = App()
+        val result = classUnderTest.operation(10, 4) { a: Int, b: Int ->
+            a.minus(b)
+        }
+        assertEquals(5, result, "10 - 4 should be 6")
     }
 }
