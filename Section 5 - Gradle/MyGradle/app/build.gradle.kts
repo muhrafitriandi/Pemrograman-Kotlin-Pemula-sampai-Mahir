@@ -16,6 +16,10 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    // For private repository
+//    maven {
+//        url = uri("https://dl.bintray.com/bliblidotcom/maven")
+//    }
 }
 
 dependencies {
@@ -29,6 +33,12 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    // Gson
+    implementation("com.google.code.gson:gson:2.10.1")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
