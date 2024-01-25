@@ -49,12 +49,24 @@ tasks.named<Test>("test") {
 }
 
 tasks.register("printEven") {
+    val numbers = (0..10)
+    val evenNumber = numbers.filter { it % 2 == 0 }
+
     doFirst {
-        val numbers = (0..10)
-        val evenNumber = numbers.filter { it % 2 == 0 }
         println(evenNumber)
     }
     doLast {
         println("Finish")
+    }
+}
+
+tasks.register("appInfo") {
+    // Read properties from gradle.properties
+    val appVersion: String by project
+    val appName: String by project
+
+    doFirst {
+        println("App Name: $appName")
+        println("App Version: $appVersion")
     }
 }
