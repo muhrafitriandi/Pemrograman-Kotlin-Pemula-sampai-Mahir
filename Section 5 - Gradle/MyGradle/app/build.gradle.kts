@@ -39,6 +39,9 @@ dependencies {
 
     // Gson
     implementation("com.google.code.gson:gson:2.10.1")
+
+    implementation(project(":core"))
+    implementation(project(":features"))
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

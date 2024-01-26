@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = "MyGradle"
-include("app")
+include("app", "core", "features")
