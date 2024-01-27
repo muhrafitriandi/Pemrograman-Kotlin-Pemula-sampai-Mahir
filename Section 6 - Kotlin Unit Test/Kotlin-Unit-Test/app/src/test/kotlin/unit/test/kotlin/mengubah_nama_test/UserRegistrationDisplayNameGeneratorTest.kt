@@ -1,12 +1,15 @@
-package unit.test.kotlin.menggunakan_assertions.case1
+package unit.test.kotlin.mengubah_nama_test
 
 import org.junit.jupiter.api.*
+import unit.test.kotlin.menggunakan_assertions.case1.UserRegistration
 import unit.test.kotlin.menggunakan_assertions.case1.data.Register
 import unit.test.kotlin.menggunakan_assertions.case1.exception.ValidationException
+import unit.test.kotlin.test_generator.SimpleDisplayNameGenerator
 import kotlin.test.Test
 import kotlin.test.*
 
-class UserRegistrationTest {
+@DisplayNameGeneration(SimpleDisplayNameGenerator::class)
+class UserRegistrationDisplayNameGeneratorTest {
     private val userRegistration = UserRegistration()
 
     @Test
