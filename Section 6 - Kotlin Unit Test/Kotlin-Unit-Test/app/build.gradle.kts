@@ -29,6 +29,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.22")
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

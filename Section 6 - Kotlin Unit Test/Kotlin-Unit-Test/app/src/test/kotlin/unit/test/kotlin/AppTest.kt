@@ -3,8 +3,7 @@
  */
 package unit.test.kotlin
 
-import kotlin.test.Test
-import kotlin.test.assertNotNull
+import kotlin.test.*
 
 class AppTest {
     @Test fun appHasAGreeting() {
