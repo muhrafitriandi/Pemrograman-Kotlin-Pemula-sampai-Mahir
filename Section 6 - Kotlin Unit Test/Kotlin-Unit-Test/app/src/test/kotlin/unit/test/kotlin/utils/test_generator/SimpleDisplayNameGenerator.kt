@@ -1,4 +1,4 @@
-package unit.test.kotlin.test_generator
+package unit.test.kotlin.utils.test_generator
 
 import org.junit.jupiter.api.DisplayNameGenerator
 import java.lang.reflect.Method

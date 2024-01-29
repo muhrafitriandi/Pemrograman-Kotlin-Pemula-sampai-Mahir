@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*
 import unit.test.kotlin.menggunakan_assertions.case1.UserRegistration
 import unit.test.kotlin.menggunakan_assertions.case1.data.Register
 import unit.test.kotlin.menggunakan_assertions.case1.exception.ValidationException
-import unit.test.kotlin.test_generator.SimpleDisplayNameGenerator
+import unit.test.kotlin.utils.test_generator.SimpleDisplayNameGenerator
 import kotlin.test.Test
 import kotlin.test.*
 
