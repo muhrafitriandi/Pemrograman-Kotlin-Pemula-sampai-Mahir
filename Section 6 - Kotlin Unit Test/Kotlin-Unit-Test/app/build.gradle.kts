@@ -31,6 +31,7 @@ dependencies {
     implementation(libs.guava)
 
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.22")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.6.2")
 
 }
 

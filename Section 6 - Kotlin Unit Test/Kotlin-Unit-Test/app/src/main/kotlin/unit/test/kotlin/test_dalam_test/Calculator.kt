@@ -8,4 +8,12 @@ class Calculator {
     fun subtraction(x: Int, y: Int): Int {
         return x - y
     }
+
+    fun multiplication(x: Int, y: Int): Int {
+        return x * y
+    }
+
+    fun division(x: Int, y: Int): Double {
+        return x / y.toDouble()
+    }
 }
