@@ -2,6 +2,7 @@ package unit.test.kotlin.mocking_di_test.automatic
 
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.extension.*
+import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.junit.jupiter.MockitoExtension
 import unit.test.kotlin.mocking_di_test.PersonRepository
@@ -15,14 +16,8 @@ import unit.test.kotlin.mocking_di_test.PersonService
 open class ParentMockingAutomaticTest {
     @Mock
     private lateinit var personRepository: PersonRepository
+    @InjectMocks
     private var personService: PersonService? = null
-
-    @BeforeEach
-    fun setUp() {
-        personService = PersonService(personRepository)
-
-        println("Creating Person Service Object")
-    }
 
     @AfterEach
     fun tearDown() {
