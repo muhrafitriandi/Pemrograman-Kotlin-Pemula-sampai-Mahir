@@ -13,6 +13,8 @@ class UserManagerTest: ParentUserManagerTest() {
             User(1, "Alice"),
             User(2, "Bob")
         )
+
+        // Mengatur respons palsu untuk pemanggilan getAllUsers()
         Mockito.`when`(getUserRepository().getAllUsers()).thenReturn(fakeUsers)
 
         // Panggil metode yang akan diuji
@@ -29,6 +31,8 @@ class UserManagerTest: ParentUserManagerTest() {
     fun testAddUser() {
         // Persiapkan data tiruan untuk dipanggil oleh metode saveUser()
         val newUser = User(3, "Charlie")
+
+        // Mengatur respons palsu untuk pemanggilan saveUser(newUser)
         Mockito.`when`(getUserRepository().saveUser(newUser)).thenReturn(true)
 
         // Panggil metode yang akan diuji
