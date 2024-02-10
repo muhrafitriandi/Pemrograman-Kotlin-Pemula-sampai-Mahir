@@ -1,4 +1,4 @@
-package coroutine.kotlin.coroutineScope_function.case1
+package coroutine.kotlin.coroutineScope_function
 
 import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
