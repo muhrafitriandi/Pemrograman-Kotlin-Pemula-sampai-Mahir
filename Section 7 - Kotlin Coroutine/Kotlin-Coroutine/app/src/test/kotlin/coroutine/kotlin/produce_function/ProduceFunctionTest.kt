@@ -12,7 +12,7 @@ class ProduceFunctionTest {
     fun testProduceFunction() {
         val scope = CoroutineScope(Dispatchers.IO)
 
-        val channel: ReceiveChannel<Int> = scope.produce { // will not block
+        val channel: ReceiveChannel<Int> = scope.produce {
             repeat(10) {
                 println("Send data $it")
                 send(it)
@@ -21,13 +21,14 @@ class ProduceFunctionTest {
         }
 
         val jobReceiver = scope.launch {
-            repeat(10) {
+//            repeat(10) {
                 println("Data receive: ${channel.receive()}")
-            }
+//            }
         }
 
         runBlocking {
-            jobReceiver.join()
+            delay(Long.MAX_VALUE)
+            jobReceiver.cancel()
         }
     }
 
