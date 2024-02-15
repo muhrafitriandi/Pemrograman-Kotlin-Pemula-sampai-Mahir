@@ -26,12 +26,14 @@ class BroadcastChannelTest {
 
         val jobReceiver1 = scope.launch {
             repeat(10) {
+                delay(2000)
                 println("Receive 1 data ${receiver1.receive()}")
             }
         }
 
         val jobReceiver2 = scope.launch {
             repeat(10) {
+                delay(4000)
                 println("Receive 2 data ${receiver2.receive()}")
             }
         }
