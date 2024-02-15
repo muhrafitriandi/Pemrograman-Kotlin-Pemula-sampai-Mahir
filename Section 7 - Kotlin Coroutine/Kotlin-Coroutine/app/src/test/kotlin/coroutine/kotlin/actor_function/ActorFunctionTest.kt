@@ -1,11 +1,11 @@
-package coroutine.kotlin.actor
+package coroutine.kotlin.actor_function
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.SendChannel
 import kotlinx.coroutines.channels.actor
 import org.junit.jupiter.api.Test
 
-class ActorTest {
+class ActorFunctionTest {
     @OptIn(ObsoleteCoroutinesApi::class)
     @Test
     fun testActorFunction() {
