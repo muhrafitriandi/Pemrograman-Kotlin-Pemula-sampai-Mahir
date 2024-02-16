@@ -1,4 +1,4 @@
-package coroutine.kotlin.membuat_flow
+package coroutine.kotlin.asynchronous_flow
 
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.async
@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
 
-class FlowTest {
+class AsynchronousFlowTest {
     @Test
     fun testFlow() {
         val flow: Flow<Int> = flow {
@@ -20,7 +20,12 @@ class FlowTest {
 
         runBlocking {
             flow.collect {
-                println("Receive: $it")
+                println("Receive 1 : $it")
+                println("----------")
+            }
+
+            flow.collect {
+                println("Receive 2 : $it")
                 println("----------")
             }
         }

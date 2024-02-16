@@ -1,4 +1,4 @@
-package coroutine.kotlin.membuat_flow.case1
+package coroutine.kotlin.asynchronous_flow.case1
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
