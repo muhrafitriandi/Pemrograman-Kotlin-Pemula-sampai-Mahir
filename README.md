@@ -1,6 +1,6 @@
 ## Table of Contents
 • [Playground for Kotlin Programming Beginner to Advanced](#playground-for-kotlin-programming-beginner-to-advanced) <br />
-• [Independent Challenges](#[independent-challenges)
+• [Independent Challenges](#independent-challenges)
 
 ## Playground for Kotlin Programming Beginner to Advanced
 Ready to use ***IntelliJ IDEA*** project with basic explanations.
